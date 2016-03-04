@@ -1,0 +1,15 @@
+.site-logo {
+	@include clearfix;
+	margin: 0;
+	font-family: $codeFont; letter-spacing: 0.02em;
+}
+
+.site-logo b {
+	float: left; clear: both;
+	display: inline-block; padding: 0 10px;
+	background: $primaryColor; color: #fff;
+}
+
+.site-logo b:first-child {
+	transform: translateX(-90px);
+}

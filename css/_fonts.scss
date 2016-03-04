@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'CamingoCode';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../assets/fonts/camingo-code-regular.eot');
+	src: url('../assets/fonts/camingo-code-regular.eot?#iefix') format('embedded-opentype'),
+		 url('../assets/fonts/camingo-code-regular.woff2') format('woff2'),
+		 url('../assets/fonts/camingo-code-regular.woff') format('woff'),
+		 url('../assets/fonts/camingo-code-regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CamingoCode';
+	font-weight: bold;
+	font-style: normal;
+	src: url('../assets/fonts/camingo-code-bold.eot');
+	src: url('../assets/fonts/camingo-code-bold.eot?#iefix') format('embedded-opentype'),
+		 url('../assets/fonts/camingo-code-bold.woff2') format('woff2'),
+	 	 url('../assets/fonts/camingo-code-bold.woff') format('woff'),
+	 	 url('../assets/fonts/camingo-code-bold.ttf') format('truetype');
+}

@@ -1,0 +1,59 @@
+/* ==========================================================================
+   variables
+   ========================================================================== */
+
+/*
+ * Colors
+ * The following is inspired by this article: http://sachagreif.com/sass-color-variables/
+ */
+$black: #222;
+$white: #fff;
+$blue: #241AF6;
+
+$lightestGrey: #f3f3f3;
+$lightGrey: #ccc;
+$mediumGrey: #999;
+$darkGrey: #666;
+$darkestGrey: #444;
+
+$primaryColor: $blue;
+
+$textColor: $black;
+$backgroundColor: $lightestGrey;
+
+/*
+ * Fonts
+ */
+$fontSizesSmall: (
+	h1: 48px,
+	h2: 32px,
+	h3: 24px,
+	body: 18px,
+	small: 14px,
+	tiny: 11px,
+);
+
+$fontSizesMedium: (
+	h1: 72px,
+	h2: 48px,
+	h3: 32px,
+	body: 18px,
+	small: 18px,
+	tiny: 14px
+);
+
+$defaultLineHeight: 1.5;
+$bodyFont: sans-serif;
+$headingFont: sans-serif;
+$codeFont: 'CamingoCode', 'Courier New', 'Courier', sans-serif;
+
+/**
+ * Breakpoints
+ * The following is inspired by this article: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+ */
+$small: 540;
+$medium: 720;
+$large: 1020;
+$extraLarge: 1400;
+
+$siteWidth: 600px;

@@ -1,0 +1,74 @@
+.nav-main {
+}
+
+.nav-main ol {
+	@include bare-list; counter-reset: list;
+	margin-left: -25px;
+}
+
+.nav-main li {
+	padding: 10px 0;
+}
+
+.nav-main a {
+	overflow: hidden; position: relative;
+	display: inline-block; padding: 5px 0 5px 60px;
+}
+
+// Numbers
+.nav-main a::before {
+	content: counters(list, '.') "."; counter-increment: list;
+	position: relative; z-index: 2; float: left;
+	display: block; width: 35px; margin-left: -60px;
+	color: $primaryColor; font-weight: bold; text-align: right;
+	transition: color .1s .05s ease-out;
+}
+
+.nav-main a:hover::before,
+.nav-main a:focus::before {
+	color: #fff;
+}
+
+// Block on hover
+.nav-main a::after {
+	content: ''; position: absolute; top: 0; left: 0;
+	display: block; width: 45px; height: 100%;
+	background: $primaryColor;
+	transform: translateX(-100%); transition: transform .2s ease-out;
+}
+
+.nav-main a:hover::after,
+.nav-main a:focus::after {
+	transform: translateX(0);
+}
+
+.nav-main h2 {
+	display: inline-block;
+	text-shadow: .01em 0 $backgroundColor,
+				 -.01em 0 $backgroundColor,
+				 0 .01em $backgroundColor,
+				 0 -.01em $backgroundColor,
+				 0.03em 0 $backgroundColor,
+				 -0.06em 0 $backgroundColor,
+				 .09em 0 $backgroundColor,
+				 -.09em 0 $backgroundColor,
+				 .05em 0 $backgroundColor,
+				 -.03em 0 $backgroundColor,
+				 .05em 0 $backgroundColor,
+				 -.05em 0 $backgroundColor;
+	background-image: linear-gradient($backgroundColor, $backgroundColor),
+  	  	  	  	  	  linear-gradient($backgroundColor, $backgroundColor),
+  	  	  	  	  	  linear-gradient($textColor, $textColor);
+	background-size: .05em 0.0625em, .05em 0.0625em, 0.0625em 0.0625em;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-position: 0% 95%, 100% 95%, 0% 95%;
+}
+
+.nav-main a:hover h2,
+.nav-main a:focus h2 {
+	text-decoration: none;
+}
+
+.nav-main p {
+	margin: 0;
+}

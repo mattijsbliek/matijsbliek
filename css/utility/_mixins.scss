@@ -1,0 +1,46 @@
+/* ==========================================================================
+   mixins
+   ========================================================================== */
+
+
+/**
+ * Clearfix
+ * Actually an @extend, but we don't want to depend on inclusion order
+ *
+ * Usage:
+ * section { @include clearfix(); }
+ */
+@mixin clearfix() {
+  &::after {
+	content: ""; display: table; clear: both;
+  }
+}
+
+/*
+ * Bare list
+ *
+ * Get rid of list-style and padding
+ */
+@mixin bare-list() {
+	margin: 0; padding: 0; list-style-type: none;
+}
+
+/**
+ * For using breakpoints
+ * Usage:
+ * div { width: 60px;
+ *	@include breakpoint-min($small) { width: 80px; }
+ * }
+ */
+//scss-lint:disable ZeroUnit
+@mixin bp-min($point: 0em) {
+	@media (min-width: pxToEm($point)) { @content; }
+}
+
+@mixin bp-max($point: 0em) {
+	@media (max-width: (pxToEm($point) - 0.0625em)) { @content; }
+}
+
+@mixin bp-min-max($minPoint: 0em, $maxPoint: 0em) {
+	@media (min-width: pxToEm($minPoint)) and (max-width: (pxToEm($maxPoint) - 0.0625em)) { @content; }
+}
